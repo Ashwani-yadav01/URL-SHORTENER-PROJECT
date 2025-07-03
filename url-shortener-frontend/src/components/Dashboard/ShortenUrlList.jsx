@@ -11,4 +11,4 @@ const ShortenUrlList = ({ data }) => {
   )
 }
 
-export default ShortenUrlList;
+export default ShortenUrlList

@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -13,7 +14,20 @@ const Footer = () => {
           &copy; 2024 Linklytics. All rights reserved.
         </p>
 
-        
+        <div className="flex space-x-6 mt-4 lg:mt-0">
+          <a href="#" className="hover:text-gray-200">
+            <FaFacebook size={24} />
+          </a>
+          <a href="#" className="hover:text-gray-200">
+            <FaTwitter size={24} />
+          </a>
+          <a href="#" className="hover:text-gray-200">
+            <FaInstagram size={24} />
+          </a>
+          <a href="#" className="hover:text-gray-200">
+            <FaLinkedin size={24} />
+          </a>
+        </div>
       </div>
     </footer>
   );

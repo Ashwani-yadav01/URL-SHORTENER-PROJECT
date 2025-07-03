@@ -173,4 +173,4 @@ const ShortenItem = ({ originalUrl, shortUrl, clickCount, createdDate }) => {
   )
 }
 
-export default ShortenItem;
+export default ShortenItem

@@ -4,6 +4,7 @@ import { IoIosMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { useStoreContext } from "../contextApi/ContextApi";
 
+
 const Navbar = () => {
   const navigate = useNavigate();
   const { token, setToken } = useStoreContext();
@@ -51,17 +52,15 @@ const Navbar = () => {
           </li>
           {token && (
             <li className="hover:text-btnColor font-[500]  transition-all duration-150">
-              <Link
-                className={`${
-                  path === "/dashboard"
-                    ? "text-white font-semibold"
-                    : "text-gray-200"
-                }`}
-                to="/dashboard"
-              >
-                Dashboard
-              </Link>
-            </li>
+            <Link
+              className={`${
+                path === "/dashboard" ? "text-white font-semibold" : "text-gray-200"
+              }`}
+              to="/dashboard"
+            >
+              Dashboard
+            </Link>
+          </li>
           )}
           {!token && (
             <Link to="/register">
@@ -69,16 +68,15 @@ const Navbar = () => {
                 SignUp
               </li>
             </Link>
-          )}
+            )}
 
           {token && (
             <button
-              onClick={onLogOutHandler}
-              className="sm:ml-0 -ml-1 bg-rose-700 text-white  cursor-pointer w-24 text-center font-semibold px-2 py-2 rounded-md  hover:text-slate-300   transition-all duration-150"
-            >
+             onClick={onLogOutHandler}
+             className="sm:ml-0 -ml-1 bg-rose-700 text-white  cursor-pointer w-24 text-center font-semibold px-2 py-2 rounded-md  hover:text-slate-300   transition-all duration-150">
               LogOut
             </button>
-          )}
+            )}
         </ul>
         <button
           onClick={() => setNavbarOpen(!navbarOpen)}
@@ -96,4 +94,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

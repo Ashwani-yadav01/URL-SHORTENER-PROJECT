@@ -105,4 +105,4 @@ const CreateNewShorten = ({ setOpen, refetch }) => {
   )
 }
 
-export default CreateNewShorten;
+export default CreateNewShorten
