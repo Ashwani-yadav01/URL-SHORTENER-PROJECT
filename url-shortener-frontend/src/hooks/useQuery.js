@@ -27,11 +27,12 @@ export const useFetchMyShortUrls = (token, onError) => {
 };
 
 export const useFetchTotalClicks = (token, onError) => {
+  const today = new Date().toISOString().split("T")[0];
   return useQuery(
     "url-totalclick",
     async () => {
       return await api.get(
-        "/api/urls/totalClicks?startDate=2024-01-01&endDate=2025-12-31",
+        "/api/urls/totalClicks?startDate=2024-01-01&endDate=${today}",
         {
           headers: {
             "Content-Type": "application/json",
